@@ -1,2 +1,2 @@
-# BCIT1
-Some of my coding exercises in Prog 1
+# BCIT 1
+Compilation in some of my activities
