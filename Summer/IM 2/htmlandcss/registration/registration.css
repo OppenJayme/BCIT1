@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* No change */
+    height: 100%;
+    background-color: beige;
+    margin-top: 250px;
+    
+}
+
+.register-container .left-register {
+    width: 50%; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10px;
+}
+.register-container .left-register h2{
+    font-size: 17px;
+}
+.register-container .left-register h1{
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.register-container .right-register {
+    width: 50%; /* Decreased to accommodate the increase in .left-register */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    padding-left: 100px;
+    border-left: 1px solid black;
+}
+
+
+
