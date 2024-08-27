@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* profile START */
+
+.profile {
+    margin-top: 36px;
+    position: absolute;
+    right: 50px;
+    z-index: 1013;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+#user-identity{
+    float: left;
+    font-weight: bold;
+    font-size: 14px;
+    max-width: 240px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #404040;
+    padding: 3px 50px 17px 18px;
+    margin-bottom: 0px;
+    border-radius: 100px;
+    border-right: none;
+    margin-right: 25px;
+    background: #f6f6f6;
+    min-width: 140px;
+}
+#profile-check{
+    position: absolute;
+    font-size: 12px;
+    left: 20px;
+    bottom: 3px;
+    
+}
+
+
+
+/* profile END */
+
+
+/* sidebar START */
+
+.left-sidebar{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 235px;
+    background: #f6f6f6;
+    overflow-y: auto;
+    z-index: 1014;
+    
+}
+
+#logo img{
+    display: inline-block;
+    width: 150px;  /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+}
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    position: relative;
+}
+nav {
+    width: 100%;
+}
+.menu nav ul li {
+    position: relative;
+    padding: 10px 15px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.menu nav ul li a, .menu nav ul li button {
+    display: block;
+    padding: 5px 15px; /* Adjust padding as needed */
+    color: #03151E;
+    text-decoration: none;
+    text-shadow: 2px 4px 4px rgba(0,0,0,0.14);
+    height: 100%;
+}
+
+
+.menu nav ul li:hover {
+    background-color: #ddd; /* Change to the color you want when hovered */
+}
+
+/* sidebar END */
+
+/* content START */
+.main-content {
+    margin-left: 250px;
+    position: fixed;
+    padding: 25px;
+    width: 65%;
+}
+.main-content h1 {
+    font-family: "Oswald", sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 50px;
+    text-shadow: 2px 4px 4px rgba(0,0,0,0.14);
+    border-bottom: 1px black solid;
+}
+.main-content h2{
+    margin-top: 35px;
+    font-family: "Oswald", sans-serif;
+    color: black;
+    border-bottom: 1px #dfe2ec solid;
+}
+/* ENTRY BOOK AREA */
+
+.entry-book {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+label {
+    color: #03151E;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+}
+.entry-book #title, .entry-book #author, .entry-book #publisher{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    font-size: 15px;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+}
+.entry-book #description{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    font-size: 15px;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+}
+#publish-date{
+    padding-top: 7px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.entry-book #publish-year, .entry-book #publish-month, .entry-book #publish-day{
+    width:100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    font-size: 15px;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+}
+input[type="text"]{
+    display: block;
+    margin-top: 0px;
+}
+.cell1, .cell2, .cell3{
+    width: 30%;
+    margin-right: 10px;
+}
+.cell4 {
+    border: none;
+    width: 100%;
+}
+
+div {
+    display: block;
+}
+.entry-book #pages{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    font-size: 15px;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+}
+button {
+    margin-top: 10px;
+    background-color: #7091E6;
+    color: white;
+    border: none;
+    padding: 2px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    width: 100px;
+    height: 40px;
+}
+
+
+

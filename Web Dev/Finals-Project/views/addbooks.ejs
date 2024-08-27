@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lil Brary</title>
+    <link rel="stylesheet" href="/css/addbooks.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+    <div class="left-sidebar">
+        <a href ="/lilbrary"id="logo"><img src="/img/logo(real).png"></a>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li class="link home-link"><a href="/addbooks">Add Books</a></li>
+                    <li class="link library-link"><a href="/lilbrary">Library</a></li>
+                    <li class="link logout-link"><a href="/logout">Log Out</a></li>
+                </ul>   
+            </nav>
+        </div>
+    </div>  
+    </section>
+        <section>
+            <div class="profile">
+                <div id="user-identity">Ivan Jayme</div>
+                <div id="profile-check">Profile</div>
+            </div>
+        </section>
+        <section>
+            <div class="main-content">
+                <h1>This is where you add your books.</h1>
+                <h2>Add books</h2>
+                <form id="add-book-form" method="POST" action="/addbooks">
+                    <div class="entry-book">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" maxlength="512">
+
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author" maxlength="512">
+
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" maxlength="512"></textarea>
+
+                        <label for="author">Publisher</label>
+                        <input type="text" id="publisher" name="publisher" maxlength="512" >
+                        
+                        <label id="publish-date">Publish Date</label><br>
+                        <div class="cell1">
+                        <label for="publish-year" class="publish-year">Year</label>
+                        <input type="text" id="publish-year" name="publish-year" placeholder="YYYY" maxlength="512" data-type="number">
+                        </div>  
+                        <div class="cell2">
+                        <label for="publish-month" class="publish-month">Month</label>
+                        <input type="text" id="publish-month" name="publish-month" placeholder="MM" maxlength="512" data-type="number">
+                        </div>
+                        <div class="cell3">
+                        <label for="publish-day" class="publish-day">Day</label>
+                        <input type="text" id="publish-day" name="publish-day" placeholder="DD"maxlength="512" data-type="number">
+                        </div>
+                        <div class="cell4">
+                        <label for="pages" class="pages">Pages</label>
+                        <input type="text" id="pages" name="pages" placeholder="" maxlength="512" data-type="number">
+                        </div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+</body>
+</html>

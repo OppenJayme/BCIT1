@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Lil Brary</div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="/landing">Home</a></li>
+                    <li><a href="/loginpage"><button>My Library</button></a></li>
+                </ul>   
+            </nav>
+        </div>
+    </div>
+    <section>
+         <div class="login">
+            <% if (messages.error) { %>
+                <div class="alert alert-error" id="alert-error">
+                <%= messages.error %>
+                </div>
+                <% } %>
+            <h1>SIGN UP</h1>
+                <div class="user-details">
+                     <form action="/register" method="POST">
+                        <span>First Name</span> 
+                        <input type="text" name="firstName" placeholder="First Name" required> <br>
+                        <span>Last Name</span>
+                        <input type="text" name="lastName" placeholder="Password" required><br>
+                        <span>Email</span>
+                        <input type="text" name="email" placeholder="Email" required><br> 
+                        <span>Password</span>
+                        <input type="password" name="password" placeholder="Confirm Password" required><br>
+                        <span>Passwords must be not less than 6 chracters </span>
+                        <button type="submit">Sign Up</button>
+                     </form>
+                 <div id = "register">
+                    <p>Already have an account? <a href="/loginpage">Login</a></p>
+                 </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

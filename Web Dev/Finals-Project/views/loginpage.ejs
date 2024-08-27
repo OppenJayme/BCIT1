@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lil brary</title>
+    <link rel="stylesheet" href="/css/logincss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Lil Brary</div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="/landing">Home</a></li>
+                        <li><button>My Library</button></li>
+                    </ul>   
+                </nav>
+            </div>
+        </div>
+            <div class="login">
+                <% if (messages.error) { %>
+                    <div class="alert alert-error" id="alert-error">
+                    <%= messages.error %>
+                    </div>
+                    <% } %>
+                <% if (messages.success) { %>
+                <div class="alert alert-success" id="alert-success">
+                <%= messages.success %>
+                </div>
+                <% } %>
+                <h1>Login</h1>
+                <form action="/loginpage" method="POST">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+                <div id = "register">
+                <p>Don't have an account? <a href="/register">Sign up</a></p>
+            </div>
+            </div>
+    </div>
+  </body>
+</html>

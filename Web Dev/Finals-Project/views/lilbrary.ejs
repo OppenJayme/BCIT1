@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lil Brary</title>
+    <link rel="stylesheet" href="/css/lilbrary.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+    <div class="left-sidebar">
+        <a href ="/lilbrary" id="logo"><img src="/img/logo(real).png"></a>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li class="link home-link"><a href="/addbooks">Add Books</a></li>
+                    <li class="link library-link"><a href="/lilbrary">Library</a></li>
+                    <li class="link logout-link"><a href="/logout">Log Out</a></li>
+                </ul>   
+            </nav>
+        </div>
+    </div>  
+    </section>
+    <section>
+        <div class="profile">
+            <div id="user-identity">Ivan Jayme</div>
+            <div id="profile-check">Profile</div>
+        </div>
+    </section>
+    <section id="contact-display">
+        <% if (messages.success) { %>
+            <div class="alert alert-success" id="alert-success">
+                <%= messages.success %>
+            </div>
+        <% } %>
+        <div class="main-content">
+            <h1>Check out your books!</h1>
+        </div>
+        <% books.forEach(book => { %>
+            <div class="book">
+              <h2 class="book-title" id="book-author"><%= book.title %></h2>
+              <h3 class="book-author" id="book-author"><%= book.author %></h3>
+              <div class="book-details">
+                <span class="book-year"><%= book.datePublished.toDate().getFullYear() %></span>
+                <span class="book-pages"><%= book.pages %> Pages</span>
+                <span class="book-publisher">(<%= book.publisher %>)</span>
+            </div>
+              <p class="book-description" id="book-description"><%= book.description %></p>
+              <p class="book-status" id="book-status">Status</p>
+              <p class="book-status-live" id="book-status-live">Available</p>
+              <button id="edit-button"><a href="/editbooks/<%= book.id %>">Edit</a></button><button class="delete-button" data-id="<%= book.id %>">Delete</button><button class="issue-button">Issue</button>
+            </div>
+          <% }) %>    
+    </section>
+    <script>
+        document.querySelectorAll('.delete-button').forEach(button => {
+          button.addEventListener('click', (e) => {
+            const id = e.target.dataset.id;
+            fetch(`/books/${id}`, {
+              method: 'DELETE',
+            }).then(res => location.reload());
+          });
+        });
+        document.querySelectorAll('.issue-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const bookStatus = button.parentElement.querySelector('.book-status-live');
+                 if (bookStatus.textContent === 'Available') {
+                    bookStatus.textContent = 'Issued';
+                    button.textContent = 'Unissue';
+                 } else {
+                    bookStatus.textContent = 'Available';
+                    button.textContent = 'Issue';
+                }
+            });
+        });
+      </script>
+</body>
+</html>
